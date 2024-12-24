@@ -160,3 +160,33 @@ plt.show()
 *Two separate bar graphs visualizing the highest paid skills and most in-demand skills for data analysts in the US.*  
 
 ### Insights
+
+# The Analysis
+
+## 4. What is the most optimal skill to learn for Data Analysts?
+#### Visualize Data
+```python
+from adjustText import adjust_text
+from matplotlib.ticker import PercentFormatter
+df_DA_skills_high_demand.plot(kind='scatter',x='skill_percent',y='median_salary')
+# empty list to collect x and y values and label names in the for loop below
+texts = []
+# create a loop to find skill location (x,y)
+for i, txt in enumerate(df_DA_skills_high_demand.index):
+    texts.append(plt.text(df_DA_skills_high_demand['skill_percent'].iloc[i],df_DA_skills_high_demand['median_salary'].iloc[i],txt))
+adjust_text(texts, arrowprops=dict(arrowstyle='->', color='gray', lw=1))
+ax = plt.gca()
+ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y/1000)}K'))
+ax.xaxis.set_major_formatter(PercentFormatter(decimals=0))
+# set axis labels, title and legend
+plt.xlabel('Percent of Data Analyst Job Postings')
+plt.ylabel('Median Yearly Salary ($USD)')
+plt.title('Most Optimal Skills for Data Analysts in the US')
+plt.tight_layout()
+plt.show()
+```
+### Results
+![optimal_skills](/2_Project/images/optimal_skills.png)  
+*A scatter plot visualizing the most optimal skills (high paying and high demand) for data analysts in the US.*  
+
+### Insights
