@@ -53,3 +53,39 @@ plt.show()
 ![image_skill_demand_all_roles](/2_Project/images/skill_demand_all_data_roles.png)  
 
 ### Insights
+
+
+# The Analysis
+
+## 2. How are in-demand skills trending for Data Analysts?
+### Visualize Data
+```python
+df_plot = df_DA_US_percent.iloc[:,:5]
+
+sns.lineplot(
+    data=df_plot,
+    dashes=False,
+    palette='tab10'
+)
+sns.set_theme(style='ticks')
+sns.despine()
+
+plt.title('Trending Top Skills for Data Analysts in the US')
+plt.ylabel('Likelihood in Job Posting')
+plt.xlabel('2023')
+plt.legend().remove()
+
+# change yaxis to percentage
+from matplotlib.ticker import PercentFormatter
+ax = plt.gca()
+ax.yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+# use for loop to add label to each line
+for i in range (5):
+    plt.text(11.2,df_plot.iloc[-1,i],df_plot.columns[i])
+```
+
+![Skills_trend](/2_Project/images/top_skill_trends.png)  
+*Line chart visualizing the trending top skills for data analysts in the US in 2023.*
+
+### Insights
