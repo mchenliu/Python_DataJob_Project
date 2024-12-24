@@ -85,7 +85,78 @@ for i in range (5):
     plt.text(11.2,df_plot.iloc[-1,i],df_plot.columns[i])
 ```
 
+### Results
 ![Skills_trend](/2_Project/images/top_skill_trends.png)  
 *Line chart visualizing the trending top skills for data analysts in the US in 2023.*
+
+### Insights
+
+# The Analysis
+
+## 3. How well do jobs and skills pay for Data Analysts?
+
+### Salary Analysis
+
+### Visualize Data
+```python
+sns.boxplot(data=df_US_top6, x='salary_year_avg', y='job_title_short', order=job_order)
+sns.set_theme(style='ticks')
+
+plt.title('Salary Distribution in the US')
+plt.xlabel('Yearly Salary ($USD)')
+plt.ylabel('')
+plt.xlim(0,600000)
+ticks_x=plt.FuncFormatter(lambda y, pos: f'${int(y/1000)}K')
+plt.gca().xaxis.set_major_formatter(ticks_x)
+plt.show()
+```
+
+### Results
+![salary_analysis](/2_Project/images/salary_distribution.png)  
+*Box plot visualizing the salary distribution for the top 6 data jobs.*
+
+### Insights
+
+# The Analysis
+
+## 3. How well do jobs and skills pay for Data Analysts?
+### Highest Paid & Most Demanded Skills for Data Analysts
+#### Visualize Data
+```python
+fig, ax = plt.subplots(2,1)
+
+#set seaborn theme
+sns.set_theme(style='ticks')
+# plot df_DA_top_pay
+# use seaborn.barplot
+sns.barplot(data=df_DA_top_pay,x='median',y=df_DA_top_pay.index,ax=ax[0],hue ='median',palette='dark:b_r') # '_r' to reverse colroing
+ax[0].legend().remove() # remove legend
+ax[0].set_title('Top 10 Highest Paid Skills for Data Analysts')
+ax[0].set_ylabel('')
+ax[0].set_xlabel('')
+ax[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda x,_: f'${int(x/1000)}K'))
+# plot df_DA_skills
+# use seaborn.barplot
+sns.barplot(
+    data=df_DA_skills,
+    x='median',
+    y=df_DA_skills.index,
+    ax=ax[1],
+    hue ='median',
+    palette='light:b'
+)
+ax[1].legend().remove() # remove legend
+ax[1].set_title('Top 10 Most In-Demand Skills for Data Analysts')
+ax[1].set_ylabel('')
+ax[1].set_xlabel('Median Salary ($USD)')
+ax[1].set_xlim(ax[0].get_xlim())
+ax[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda x,_: f'${int(x/1000)}K'))
+plt.tight_layout()
+plt.show()
+```
+
+### Results
+![top_paid_and_top_demand_skills](/2_Project/images/top_paid_and_top_demand_skills.png)  
+*Two separate bar graphs visualizing the highest paid skills and most in-demand skills for data analysts in the US.*  
 
 ### Insights
