@@ -13,7 +13,7 @@
 - [Challenges I Faced](#challenges-i-faced)
 - [Conclusion](#conclusion)
 # Introduction
-This project was created under the guidance of Luke Barousse's course on [Youtube](https://www.youtube.com/watch?v=wUSDVGivd-8) to discover insights of data analyst roles. The dataset used is from Luke's [Hugging Face](https://huggingface.co/datasets/lukebarousse/data_jobs).
+This project was created under the guidance of Luke Barousse's course on [Youtube](https://www.youtube.com/watch?v=wUSDVGivd-8) to discover insights of data analyst roles in Australia. The dataset used was from Luke's [Hugging Face](https://huggingface.co/datasets/lukebarousse/data_jobs).
 Below are the questions I want to answer in my project:
 1. What are the skills most in demand for the top 3 most popular data roles?
 2. How are in-demand skills trending for Data Analysts?
