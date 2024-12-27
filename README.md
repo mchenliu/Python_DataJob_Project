@@ -25,12 +25,17 @@ Below are the questions I want to answer in my project:
    - Pandas Library: This was used to analyze the data.
    - Matplotlib Library: This was used to visualized the data.
    - Seaborn Library: This was used to create more advanced visuals.  
-📓 Jupyter Notebooks: The tool I used to run my Python scripts which let me easily include my notes and analysis.
+
+📓 Jupyter Notebooks: The tool I used to run my Python scripts which enables me to include my notes and analysis.  
+
 💻 Visual Studio Code: A lightweight, versatile code editor. I utilized     Visual Studio Code to edit project scripts and manage images, ensuring seamless integration and synchronization with GitHub for version control and collaboration.  
+
 🐙 Git & Github: My go-to for version control and tracking my project progress.
 
 # ETL
+Extraced data from [Hugging Face](https://huggingface.co/datasets/lukebarousse/data_jobs), performed initial data cleaning to ensure accuracy and usability.
 
+**Import and Clean Data**
 
 ```python
 # importing libraries
@@ -47,6 +52,11 @@ df=dataset['train'].to_pandas()
 # data cleanup
 df['job_posted_date'] = pd.to_datetime(df['job_posted_date'])
 df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if pd.notna(x) else x)
+```
+
+**Filter Australia Jobs**
+```python
+df_US = df[df['job_country'] == 'Australia']
 ```
 # The Analysis
 
