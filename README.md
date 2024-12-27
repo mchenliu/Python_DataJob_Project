@@ -1,7 +1,6 @@
 # Table of Content
 - [Table of Content](#table-of-content)
 - [Introduction](#introduction)
-- [Background](#background)
 - [Tools Used](#tools-used)
 - [ETL](#etl)
 - [The Analysis](#the-analysis)
@@ -14,24 +13,25 @@
 - [Challenges I Faced](#challenges-i-faced)
 - [Conclusion](#conclusion)
 # Introduction
+This project was created under the guidance of Luke Barousse's course on [Youtube](https://www.youtube.com/watch?v=wUSDVGivd-8) to discover insights of data analyst roles. The dataset used is from Luke's [Hugging Face](https://huggingface.co/datasets/lukebarousse/data_jobs).
 Below are the questions I want to answer in my project:
 1. What are the skills most in demand for the top 3 most popular data roles?
 2. How are in-demand skills trending for Data Analysts?
 3. How well do jobs and skills pay for Data Analysts?
 4. What are the optimal skills for data analysts to learn? (High Demand AND High Paying)  
 
-# Background
 # Tools Used
-🐍 Python: The backbone of my analysis, allowing me to analyze the data and find critical insights.I also used the following Python libraries:  
+🐍 Python: The backbone of this project, allowing me to analyze the data and find critical insights.I also used the following Python libraries:  
    - Pandas Library: This was used to analyze the data.
-   - Matplotlib Library: I visualized the data.
-   - Seaborn Library: Helped me create more advanced visuals.  
-
+   - Matplotlib Library: This was used to visualized the data.
+   - Seaborn Library: This was used to create more advanced visuals.  
 📓 Jupyter Notebooks: The tool I used to run my Python scripts which let me easily include my notes and analysis.
-💻 Visual Studio Code: A lightweight, versatile code editor. I utilized Visual Studio Code to edit project scripts and manage images, ensuring seamless integration and synchronization with GitHub for version control and collaboration.  
+💻 Visual Studio Code: A lightweight, versatile code editor. I utilized     Visual Studio Code to edit project scripts and manage images, ensuring seamless integration and synchronization with GitHub for version control and collaboration.  
 🐙 Git & Github: My go-to for version control and tracking my project progress.
 
 # ETL
+
+
 ```python
 # importing libraries
 import ast
