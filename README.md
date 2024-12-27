@@ -1,22 +1,56 @@
-# Table of Contents
-- [Table of Contents](#table-of-contents)
+# Table of Content
+- [Table of Content](#table-of-content)
 - [Introduction](#introduction)
 - [Background](#background)
 - [Tools Used](#tools-used)
-- [Analysis](#analysis)
-  - [1. What are the most demanded skills for the top 3 most popular data roles?](#1-what-are-the-most-demanded-skills-for-the-top-3-most-popular-data-roles)
-  - [2. How are in-demand skills trending for Data Analysts?](#2-how-are-in-demand-skills-trending-for-data-analysts)
-  - [3. How well do jobs and skills pay for Data Analysts?](#3-how-well-do-jobs-and-skills-pay-for-data-analysts)
-  - [3. How well do jobs and skills pay for Data Analysts?](#3-how-well-do-jobs-and-skills-pay-for-data-analysts-1)
-  - [4. What is the most optimal skill to learn for Data Analysts?](#4-what-is-the-most-optimal-skill-to-learn-for-data-analysts)
+- [ETL](#etl)
+- [The Analysis](#the-analysis)
+  - [:one: What are the most demanded skills for the top 3 most popular data roles?](#one-what-are-the-most-demanded-skills-for-the-top-3-most-popular-data-roles)
+  - [:two: How are in-demand skills trending for Data Analysts?](#two-how-are-in-demand-skills-trending-for-data-analysts)
+  - [:three: How well do jobs and skills pay for Data Analysts?](#three-how-well-do-jobs-and-skills-pay-for-data-analysts)
+  - [:three: How well do jobs and skills pay for Data Analysts?](#three-how-well-do-jobs-and-skills-pay-for-data-analysts-1)
+  - [:four: What is the most optimal skill to learn for Data Analysts?](#four-what-is-the-most-optimal-skill-to-learn-for-data-analysts)
 - [What I learned](#what-i-learned)
+- [Challenges I Faced](#challenges-i-faced)
 - [Conclusion](#conclusion)
 # Introduction
+Below are the questions I want to answer in my project:
+1. What are the skills most in demand for the top 3 most popular data roles?
+2. How are in-demand skills trending for Data Analysts?
+3. How well do jobs and skills pay for Data Analysts?
+4. What are the optimal skills for data analysts to learn? (High Demand AND High Paying)  
+
 # Background
 # Tools Used
-# Analysis
+🐍 Python: The backbone of my analysis, allowing me to analyze the data and find critical insights.I also used the following Python libraries:  
+   - Pandas Library: This was used to analyze the data.
+   - Matplotlib Library: I visualized the data.
+   - Seaborn Library: Helped me create more advanced visuals.  
 
-## 1. What are the most demanded skills for the top 3 most popular data roles?
+📓 Jupyter Notebooks: The tool I used to run my Python scripts which let me easily include my notes and analysis.
+💻 Visual Studio Code: A lightweight, versatile code editor. I utilized Visual Studio Code to edit project scripts and manage images, ensuring seamless integration and synchronization with GitHub for version control and collaboration.
+🐙 Git & Github: My go-to for version control and tracking my project progress.
+
+# ETL
+```python
+# importing libraries
+import ast
+import pandas as pd
+from datasets import load_dataset
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# load data
+dataset= load_dataset('lukebarousse/data_jobs')
+df=dataset['train'].to_pandas()
+
+# data cleanup
+df['job_posted_date'] = pd.to_datetime(df['job_posted_date'])
+df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if pd.notna(x) else x)
+```
+# The Analysis
+
+## :one: What are the most demanded skills for the top 3 most popular data roles?
 
 View my notebook with detailed steps here: [2_Skills_Count.ipynb](2_Project/2_Skills_Count.ipynb)
 
@@ -72,7 +106,7 @@ plt.show()
 
 
 
-## 2. How are in-demand skills trending for Data Analysts?
+## :two: How are in-demand skills trending for Data Analysts?
 **Visualize Data**
 ```python
 df_plot = df_DA_US_percent.iloc[:,:5]
@@ -107,7 +141,7 @@ for i in range (5):
 **Insights**
 
 
-## 3. How well do jobs and skills pay for Data Analysts?
+## :three: How well do jobs and skills pay for Data Analysts?
 
 **Visualize Data**
 ```python
@@ -130,7 +164,7 @@ plt.show()
 **Insights**
 
 
-## 3. How well do jobs and skills pay for Data Analysts?
+## :three: How well do jobs and skills pay for Data Analysts?
 **Highest Paid & Most Demanded Skills for Data Analysts**
 **Visualize Data**
 ```python
@@ -173,7 +207,7 @@ plt.show()
 **Insights**
 
 
-## 4. What is the most optimal skill to learn for Data Analysts?
+## :four: What is the most optimal skill to learn for Data Analysts?
 **Visualize Data**
 ```python
 from adjustText import adjust_text
@@ -202,4 +236,5 @@ plt.show()
 **Insights**
 
 # What I learned
+# Challenges I Faced
 # Conclusion
