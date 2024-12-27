@@ -28,7 +28,7 @@ Below are the questions I want to answer in my project:
    - Seaborn Library: Helped me create more advanced visuals.  
 
 📓 Jupyter Notebooks: The tool I used to run my Python scripts which let me easily include my notes and analysis.
-💻 Visual Studio Code: A lightweight, versatile code editor. I utilized Visual Studio Code to edit project scripts and manage images, ensuring seamless integration and synchronization with GitHub for version control and collaboration.
+💻 Visual Studio Code: A lightweight, versatile code editor. I utilized Visual Studio Code to edit project scripts and manage images, ensuring seamless integration and synchronization with GitHub for version control and collaboration.  
 🐙 Git & Github: My go-to for version control and tracking my project progress.
 
 # ETL
