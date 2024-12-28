@@ -258,6 +258,8 @@ plt.show()
 ## :four: What is the most optimal skill to learn for Data Analysts?  
 To determine the most optimal skills to learn—those that are both highly paid and in high demand—I calculated the percentage of job postings requiring each skill alongside their median salaries. This analysis highlights the skills that offer the best combination of demand and compensation.  
 
+View my notebook with detailed steps here: [5_Optimal_skills.ipynb](/2_Project/4_Salary_Analysis.ipynb)
+
 **Visualize Data**
 ```python
 from adjustText import adjust_text
