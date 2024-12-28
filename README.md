@@ -293,5 +293,15 @@ plt.show()
 - **Avoid over-investing** in niche skills like C, it may not offer significant returns due to low demand and salary potential.
 
 # What I learned
+Through this project, I gained deeper insights into the Australian data analyst job market while refining my technical proficiency in Python.  
+Here are a few specific things I learned:
+- **Importance of EDA & ETL:** I recognized the critical role of exploratory data analysis (EDA) and extract, transform, load (ETL) processes in data analysis. EDA involves analyzing and visualizing data to uncover key characteristics, patterns, and relationships between variables. Meanwhile, ETL ensures the data's accuracy and reliability, laying a solid foundation for deriving meaningful insights.
+- **Advanced Python Usage:** Gained hands-on experience in leveraging Python for data analysis, utilizing libraries such as Pandas, Matplotlib, and Seaborn for efficient data cleaning and insightful visualization.
+- **Strategic Analysis:** I developed the ability to craft project questions that enable a focused deep dive while maintaining a broad perspective, ensuring a comprehensive understanding without becoming overwhelmed by details.
+
 # Challenges I Faced
+This project came with its challenges but offered valuable learning opportunities:  
+- **Limited Data Availability:** There were only a couple thousand Australian job data in the original dataset, which constrained the scope of analysis. However, it provided an opportunity to develop strategies for deriving meaningful insights from smaller datasets.
+- **Data Inconsistencies:** Managing missing or inconsistent data entries involves thoughtful data-cleaning practices to ensure the analysis remains accurate and reliable.
 # Conclusion
+This project offers valuable insights into the dynamic data science job market, highlighting essential skills and emerging trends. SQL and Python stand out as foundational skills across all job levels, while data visualization tools like Power BI and Tableau are highly sought after. Transitioning from data analyst roles to engineering positions requires proficiency in cloud computing and big data tools. Despite being a traditional tool, Excel continues to hold relevance for data analyst roles, underscoring its enduring importance in the field.
