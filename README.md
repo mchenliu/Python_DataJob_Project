@@ -107,6 +107,7 @@ fig.tight_layout(h_pad=0.5) # fix overlap
 plt.show()
 ```
 **Results**
+
 ![image_skill_demand_all_roles](/2_Project/images/job_skills.png)  
 *Bar charts illustrating the top three in-demand positions along with their five most sought-after skills.*
 
@@ -123,6 +124,7 @@ To analyze skill trends for Data Analysts in 2023, I filtered job postings for d
 View my notebook with detailed steps here: [3_Skills_Trend.ipynb](/2_Project/3_Skills_Trend.ipynb)
 
 **Visualize Data**
+
 ```python
 # Plot
 df_plot = df_DA_aus_percent.iloc[:, :5]
@@ -156,6 +158,7 @@ plt.show()
 ```  
 
 **Results**
+
 ![Skills_trend](/2_Project/images/trending_skills.png)  
 *Line chart visualizing the trending top skills for data analysts in Austrlia in 2023.*
 
@@ -172,6 +175,7 @@ To determine the highest-paying roles and skills, I focused on job postings in A
 View my notebook with detailed steps here: [4_Salary_Analysis.ipynb](/2_Project/4_Salary_Analysis.ipynb)
 
 **Visualize Data**
+
 ```python
 # plot with seaborn, sort by salary median
 sns.boxplot(data=df_aus_top10, x='salary_year_avg', y='job_title_short', order=job_order)
@@ -186,6 +190,7 @@ plt.show()
 ```
 
 **Results**
+
 ![salary_distribution](/2_Project/images/salary_distribution.png)  
 *Box plot visualizing the salary distributions for the top 10 data job titles.*
 
@@ -196,8 +201,10 @@ plt.show()
 - **Data Analysts and Business Analysts are compensated at lower ranges**, aligning with their position as foundational roles in data and business operations.
 
 ## :three:.:two: Highest Paid & Most Demanded Skills for Data Analysts?
-I then refined my analysis to focus exclusively on data analyst roles, examining both the highest-paid skills and the most in-demand skills. To present these insights, I utilized two bar charts for clear visualization.
-**Visualize Data**
+I then refined my analysis to focus exclusively on data analyst roles, examining both the highest-paid skills and the most in-demand skills. To present these insights, I utilized two bar charts for clear visualization.  
+
+**Visualize Data**  
+
 ```python
 fig, ax = plt.subplots(2,1)
 #set seaborn theme
@@ -237,6 +244,7 @@ plt.show()
 ```
 
 **Results**
+
 ![top_paid_and_top_demand_skills](/2_Project/images/top_paid_skills.png)  
 *Two separate bar graphs visualizing the highest paid skills and most in-demand skills for data analysts in Australia.*  
 
@@ -250,8 +258,6 @@ plt.show()
 ## :four: What is the most optimal skill to learn for Data Analysts?  
 To determine the most optimal skills to learn—those that are both highly paid and in high demand—I calculated the percentage of job postings requiring each skill alongside their median salaries. This analysis highlights the skills that offer the best combination of demand and compensation.  
 
-![optimal_skills](/2_Project/images/optimal_skills.png)  
-  
 **Visualize Data**
 ```python
 from adjustText import adjust_text
@@ -273,6 +279,7 @@ plt.tight_layout()
 plt.show()
 ```
 **Results**
+
 ![optimal_skills](/2_Project/images/optimal_skills.png)  
 *A scatter plot visualizing the most optimal skills (high paying and high demand) for data analysts in Australia.*  
 
